@@ -1,0 +1,4 @@
+1. ЛК (1-ADMIN, 2-MANAGER, SELLER)
+2. Home page(info, ...)
+3. Товары seller (): user-клиент
+4. Удвление юзеров

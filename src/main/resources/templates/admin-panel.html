@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin</title>
+</head>
+<body>
+<div>
+    <div th:each="user : ${users}">
+        <div>
+            <label>ID пользователя
+                <span th:text="${user.getUserID()}"></span>
+            </label>
+            <label>Имя
+                <span th:text="${user.getFirstName()}"></span>
+            </label>
+            <label>Фамилия
+                <span th:text="${user.getLastName()}"></span>
+            </label>
+            <label>Отчество
+                <span th:text="${user.getMiddleName()}"></span>
+            </label>
+            <label>Телефон
+                <span th:text="${user.getPhone()}"></span>
+            </label>
+            <label>Почта
+                <span th:text="${user.getEmail()}"></span>
+            </label>
+            <label>Роль
+                <span th:text="${user.getRole()}"></span>
+            </label>
+            <label>Активность
+                <span th:text="${user.getActive()}"></span>
+            </label>
+        </div>
+    </div>
+    <form method="post" action="/admin/block-user">
+        <label>Введите ID пользователя которого хотите заблокировать:
+            <input name="id" type="text">
+        </label>
+        <input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}"/>
+        <button type="submit">Заблокировать</button>
+    </form>
+    <p style="color: red;" th:text="${blocked}"></p>
+</div>
+</body>
+</html>
