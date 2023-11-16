@@ -43,6 +43,7 @@ public class CustomUserDetailService implements UserDetailsService {
         return new CustomUserPrincipal(user);
     }
 
+    // Boris
     public boolean registrationUser(User user) {
         if (userRepository.findByUsername(user.getUsername()) != null) {
             return false;
