@@ -19,12 +19,15 @@ import java.util.Collections;
 @Service
 @Slf4j
 public class CustomUserDetailService implements UserDetailsService {
-
+    //Gleb
     private final UserRepository userRepository;
 
     private final PasswordEncoder passwordEncoder;
+<<<<<<< HEAD
     //Lev
 
+=======
+>>>>>>> c4d83e3 (feat(cuds): add comment)
     @Autowired
     public CustomUserDetailService(UserRepository userRepository, PasswordEncoder passwordEncoder) {
         this.userRepository = userRepository;
